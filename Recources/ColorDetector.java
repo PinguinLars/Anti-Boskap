@@ -16,12 +16,12 @@ public class ColorDetector {
                 if (color.getRed() < 125) {
                     if (color.getGreen() < 125) {
                         if (color.getBlue() < 125) {
-                                System.out.println("ColorDetector: Black detected");
+                            System.out.println("ColorDetector: Black detected");
                         }
                     }
                 }
                 y += 1;
-                if (y < 682) {
+                if (y > 682) {
                     y = 69;
                     x += 1;
                 }
