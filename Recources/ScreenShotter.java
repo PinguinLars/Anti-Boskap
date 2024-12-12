@@ -14,6 +14,6 @@ public class ScreenShotter {
         BufferedImage image = robot.createScreenCapture(rectangle);
         File file = new File("screenshot.png");
         ImageIO.write(image, "png", file);
-        System.out.println("ScreenShotter: Succesfull exuction");
+        System.out.println("ScreenShotter: Successful execution");
     }
 }
