@@ -7,7 +7,6 @@ import java.io.File;
 import javax.imageio.ImageIO;
 
 public class ScreenShotter {
-
     public static void main(String[] args) throws Exception {
         Robot robot = new Robot();
         Rectangle rectangle = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
