@@ -8,9 +8,9 @@ public class ColorDetector {
         try {
             int x = 263;
             int y = 69;
+            File file = new File("screenshot.png");
+            BufferedImage image = ImageIO.read(file);
             while (x < 877) {
-                File file = new File("screenshot.png");
-                BufferedImage image = ImageIO.read(file);
                 int pixelColor = image.getRGB(x, y);
                 Color color = new Color(pixelColor, true);
                 if (color.getRed() < 125) {
