@@ -23,7 +23,8 @@ public class ColorDetector {
                             System.out.println("ColorDetector: Black detected");
                             black = 1;
                             //Send a message to WIP webhook
-//                            TeamsLogger.main(args);
+                             //TeamsLogger.main(args);
+                            TeamsLogger.WebhookMessage = "Black detected";
                         }
                     }
                 }
