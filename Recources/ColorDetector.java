@@ -4,6 +4,7 @@ import java.io.File;
 import javax.imageio.ImageIO;
 import java.awt.Color;
 public class ColorDetector {
+    public static int black = 0;
     public static void main(String[] args) {
         try {
             int x = 263;
@@ -17,6 +18,7 @@ public class ColorDetector {
                     if (color.getGreen() < 125) {
                         if (color.getBlue() < 125) {
                             System.out.println("ColorDetector: Black detected");
+                            black = 1;
                         }
                     }
                 }
