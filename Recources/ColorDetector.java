@@ -17,9 +17,6 @@ public class ColorDetector {
                     if (color.getRed() < 125 && color.getGreen() < 125 && color.getBlue() < 125) {
                         System.out.println("ColorDetector: Black detected");
                         black = 1;
-                        //Send a message to WIP webhook
-                        //TeamsLogger.WebhookMessage = "ColorDetector: Black detected";
-                        //TeamsLogger.main(args);
                     }
                 }
             }

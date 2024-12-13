@@ -4,12 +4,11 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpRequest.BodyPublishers;
-
 public class TeamsLogger {
     public static String WebhookMessage = "error";
     public static void main(String[] args) {
         //Teams webhook is on the way.
-        String webhookUrl = "YOUR_TEAMS_WEBHOOK_URL";
+        String webhookUrl = SECRETS_DO_NOT_SHARE.WebhookURL;
         String message = "{ \"text\": \"" + WebhookMessage + "\" }";
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()

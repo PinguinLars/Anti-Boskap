@@ -15,8 +15,5 @@ public class ScreenShotter {
         File file = new File("screenshot.png");
         ImageIO.write(image, "png", file);
         System.out.println("ScreenShotter: Successful execution");
-        //Send a message to WIP webhook
-//        TeamsLogger.WebhookMessage = "ScreenShotter: Successful execution";
-//        TeamsLogger.main(args);
     }
 }
