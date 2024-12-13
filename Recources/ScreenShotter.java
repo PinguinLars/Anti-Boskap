@@ -5,6 +5,7 @@ import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import javax.imageio.ImageIO;
+import Recources.TeamsLogger;
 public class ScreenShotter {
     //Makes a screenshot to later be processed by ColorDectector.java
     public static void main(String[] args) throws Exception {
@@ -14,5 +15,8 @@ public class ScreenShotter {
         File file = new File("screenshot.png");
         ImageIO.write(image, "png", file);
         System.out.println("ScreenShotter: Successful execution");
+        //Send a message to WIP webhook
+        //TeamsLogger.WebhookMessage = "ScreenShotter: Successful execution";
+        //TeamsLogger.main(args);
     }
 }
