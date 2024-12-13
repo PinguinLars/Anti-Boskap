@@ -22,7 +22,7 @@ public class ColorDetector {
                         if (color.getBlue() < 125) {
                             System.out.println("ColorDetector: Black detected");
                             black = 1;
-                            TeamsLogger.main(args);
+//                            TeamsLogger.main(args);
                         }
                     }
                 }
