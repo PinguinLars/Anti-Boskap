@@ -3,7 +3,6 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import javax.imageio.ImageIO;
 import java.awt.Color;
-import Recources.TeamsLogger;
 public class ColorDetector {
     public static int black = 0;
     public static void main(String[] args) {

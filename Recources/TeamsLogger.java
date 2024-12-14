@@ -8,8 +8,9 @@ public class TeamsLogger {
     public static String WebhookMessage = "error";
     public static void main(String[] args) {
         //Teams webhook is on the way.
-        String webhookUrl = SECRETS_DO_NOT_SHARE.WebhookURL;
+        final String webhookUrl = SECRETS_DO_NOT_SHARE.WebhookURL;
         String message = "{ \"text\": \"" + WebhookMessage + "\" }";
+//        String message = "{ \"text\": \"" + WebhookMessage + "\", \"@mention\": { \"type\": \"Urgent\" } }";
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(webhookUrl))
