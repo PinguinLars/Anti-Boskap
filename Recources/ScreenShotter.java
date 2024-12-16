@@ -6,13 +6,13 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import javax.imageio.ImageIO;
 public class ScreenShotter {
-    //Makes a screenshot to later be processed by ColorDectector.java
+    //Maakt een screenshot om later te worden verwerkt door ColorDectector.java
     public static void main(String[] args) throws Exception {
         Robot robot = new Robot();
         Rectangle rectangle = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
         BufferedImage image = robot.createScreenCapture(rectangle);
         File file = new File("screenshot.png");
         ImageIO.write(image, "png", file);
-        System.out.println("ScreenShotter: Successful execution");
+        System.out.println("ScreenShotter: Succesvolle uitvoering");
     }
 }

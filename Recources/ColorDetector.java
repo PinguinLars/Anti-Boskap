@@ -10,14 +10,14 @@ public class ColorDetector {
             try {
                 File file = new File("screenshot.png");
                 BufferedImage image = ImageIO.read(file);
-            /*  x 263 = start x coordinate, x 877 (-1) = end x coordinate
-                y 69  = start y coordinate, y 682 (-1) = end y coordinate*/
+            /*  x 263 = start x coordinaat, x 877 (-1) = end x coordinaat
+                y 69  = start y coordinaat, y 682 (-1) = end y coordinaat*/
                 for (int x = 263; x < 877; x++) {
                     for (int y = 69; y < 682; y++) {
                         int pixelColor = image.getRGB(x, y);
                         Color color = new Color(pixelColor, true);
                         if (color.getRed() < 125 && color.getGreen() < 125 && color.getBlue() < 125) {
-                            System.out.println("ColorDetector: Black detected");
+                            System.out.println("ColorDetector: Zwart gedecteerd");
                             black = 1;
                         }
                     }
