@@ -10,6 +10,8 @@ public class ColorDetector {
             try {
                 File file = new File("screenshot.png");
                 BufferedImage image = ImageIO.read(file);
+            /*  x 263 = start x coordinate, x 877 (-1) = end x coordinate
+                y 69  = start y coordinate, y 682 (-1) = end y coordinate*/
                 for (int x = 263; x < 877; x++) {
                     for (int y = 69; y < 682; y++) {
                         int pixelColor = image.getRGB(x, y);
@@ -24,6 +26,6 @@ public class ColorDetector {
                 e.printStackTrace();
             }
             System.out.println("ColorDetector: Successful execution");
-        //}
+//        }
     }
 }
