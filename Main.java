@@ -13,9 +13,7 @@ public class Main {
     System.out.println(ColorDetector.black);
         //Stuur in bericht naar de webhook in de achtergrond.
         if (ColorDetector.black > 0) {
-            ProcessBuilder pb = new ProcessBuilder("cmd", "/c", "start", "java", "TeamsLogger");
-            pb.start();
-//            TeamsLogger.main(args);
+            TeamsLogger.main(args);
         }
     }
 }
