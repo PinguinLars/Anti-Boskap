@@ -1,1 +1,2 @@
-# O&O satelliet project.
+# O&O satellite project.
+This is a project that uses [Samsung Flow](https://www.samsung.com/us/support/owners/app/samsung-flow) and this Java program to detect if there is any unwanted Forest cutting activities and warn the police.
