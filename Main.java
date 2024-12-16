@@ -12,12 +12,10 @@ public class Main {
     System.out.println("Zwart Gedecteerd: (1 is ja, 0 is nee)");
     System.out.println(ColorDetector.black);
         //Stuur in bericht naar de webhook in de achtergrond.
-//        if (ColorDetector.black > 0) {
-//            ProcessBuilder pb = new ProcessBuilder("cmd", "/c", "start", "java", "TeamsLogger");
-//            pb.start();
-////            TeamsLogger.WebhookMessage = "ALARM";
-//            TeamsLogger.WebhookMessage = "Zwart Gedecteerd";
+        if (ColorDetector.black > 0) {
+            ProcessBuilder pb = new ProcessBuilder("cmd", "/c", "start", "java", "TeamsLogger");
+            pb.start();
 //            TeamsLogger.main(args);
-//        }
+        }
     }
 }
