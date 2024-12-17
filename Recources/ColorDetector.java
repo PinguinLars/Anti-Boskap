@@ -6,7 +6,6 @@ import java.awt.Color;
 public class ColorDetector {
     public static int black = 0;
     public static void main(String[] args) {
-//        while (true) {
             try {
                 File file = new File("screenshot.png");
                 BufferedImage image = ImageIO.read(file);
@@ -26,6 +25,5 @@ public class ColorDetector {
                 e.printStackTrace();
             }
             System.out.println("ColorDetector: Successful execution");
-//        }
     }
 }
