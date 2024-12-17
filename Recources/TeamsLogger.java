@@ -7,9 +7,9 @@ import java.net.http.HttpRequest.BodyPublishers;
 public class TeamsLogger {
     public static void main(String[] args) {
         final String webhookUrl = SECRETS_DO_NOT_SHARE.WebhookURL;
-        String message = "{ \"text\": \" penguin \" }";
+        String message = "{ \"text\": \" Made by PinguinLars1105 \" }";
         HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder()
+            HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(webhookUrl))
                 .header("Content-Type", "application/json")
                 .POST(BodyPublishers.ofString(message))
