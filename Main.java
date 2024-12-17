@@ -2,7 +2,7 @@ import Recources.*;
 import java.io.IOException;
 public class Main {
     public static void main (String[]args) throws IOException {
-//        while (true) {
+        while (true) {
             try {
                 //Voert ColorDetector and ScreenShotter uit.
                 ScreenShotter.main(args);
@@ -15,7 +15,7 @@ public class Main {
             //Stuur in bericht naar de webhook in de achtergrond.
             if (ColorDetector.black > 0) {
                 TeamsLogger.main(args);
-//            }
+            }
         }
     }
 }
