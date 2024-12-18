@@ -14,7 +14,7 @@ public class Main {
             System.out.println(ColorDetector.black);
             //Stuur in bericht naar de webhook in de achtergrond.
             if (ColorDetector.black > 0) {
-                TeamsLogger.main(args);
+//                TeamsLogger.main(args);
             }
         }
     }
