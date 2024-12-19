@@ -5,7 +5,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpRequest.BodyPublishers;
 public class TeamsLogger {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         final String webhookUrl = SECRETS_DO_NOT_SHARE.WebhookURL;
         String message = "{ \"text\": \" Made by PinguinLars1105 \" }";
         HttpClient client = HttpClient.newHttpClient();
@@ -14,12 +14,8 @@ public class TeamsLogger {
                 .header("Content-Type", "application/json")
                 .POST(BodyPublishers.ofString(message))
                 .build();
-        try {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             System.out.println("Response status code: " + response.statusCode());
             System.out.println("Response body: " + response.body());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 }

@@ -5,8 +5,7 @@ import javax.imageio.ImageIO;
 import java.awt.Color;
 public class ColorDetector {
     public static int black = 0;
-    public static void main(String[] args) {
-            try {
+    public static void main(String[] args) throws Exception {
                 File file = new File("screenshot.png");
                 BufferedImage image = ImageIO.read(file);
             /*  x 263 = start x coordinaat, x 877 (-1) = end x coordinaat
@@ -21,9 +20,6 @@ public class ColorDetector {
                         }
                     }
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
             System.out.println("ColorDetector: Successful execution");
     }
 }
