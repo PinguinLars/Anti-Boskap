@@ -1,8 +1,9 @@
 import Recources.*;
 public class Main {
     public static void main (String[]args) throws Exception {
-        byte test = 0;
-        while (test < 10) {
+        //Max amount of loops is 128 (Byte interger limit)
+        byte loops = 0;
+        while (loops < 10) {
             //Voert ColorDetector and ScreenShotter uit.
             ScreenShotter.main(args);
             ColorDetector.main(args);
@@ -15,7 +16,7 @@ public class Main {
             } else {
                 System.out.print(" en geen zwarte pixels gedecteerd");
             }
-            test++;
+            loops++;
         }
     }
 }
