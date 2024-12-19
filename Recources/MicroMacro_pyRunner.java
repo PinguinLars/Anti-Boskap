@@ -14,7 +14,7 @@ public class MicroMacro_pyRunner {
                 System.out.println(line);
             }
             int exitCode = process.waitFor();
-            System.out.println("MicroMacro_pyRunner: exit code " + exitCode);
+            System.out.println("MicroMacro_pyRunner: Successful execution with exit code: " + exitCode);
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
