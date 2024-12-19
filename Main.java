@@ -15,6 +15,7 @@ public class Main {
             //Stuur in bericht naar de webhook in de achtergrond.
             if (ColorDetector.black > 0) {
 //                TeamsLogger.main(args);
+                MicroMacro_pyRunner.main(args);
             }
         }
     }

@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 public class MicroMacro_pyRunner {
     public static void main(String[] args) {
         try {
-            ProcessBuilder pb = new ProcessBuilder("python", "MicroMacro.py");
+            ProcessBuilder pb = new ProcessBuilder("python", "C:\\Users\\230093\\IdeaProjects\\Anti-Boskap\\Recources\\MicroMacro.py");
             Process process = pb.start();
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
             String line;
@@ -14,7 +14,7 @@ public class MicroMacro_pyRunner {
                 System.out.println(line);
             }
             int exitCode = process.waitFor();
-            System.out.println("Python script executed with exit code: " + exitCode);
+            System.out.println("MicroMacro_pyRunner: exit code " + exitCode);
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
