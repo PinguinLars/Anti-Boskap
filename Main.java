@@ -13,6 +13,7 @@ public class Main {
                 System.out.println(" en zwarte pixel(s) gedecteerd");
 //                TeamsLogger.main(args);
                 MicroMacro_pyRunner.main(args);
+//                MicrobitFlasher.main(args);
             } else {
                 System.out.print(" en geen zwarte pixels gedecteerd");
             }
