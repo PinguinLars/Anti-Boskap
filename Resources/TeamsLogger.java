@@ -1,4 +1,4 @@
-package Recources;
+package Resources;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -6,7 +6,7 @@ import java.net.http.HttpResponse;
 import java.net.http.HttpRequest.BodyPublishers;
 public class TeamsLogger {
     public static void main(String[] args) throws Exception {
-        final String webhookUrl = SECRETS_DO_NOT_SHARE.WebhookURL;
+        final String webhookUrl = Config.TeamsWebhook;
         String message = "{ \"text\": \" Made by PinguinLars1105 \" }";
         HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()

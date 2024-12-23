@@ -1,11 +1,11 @@
-package Recources;
+package Resources;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class MicrobitFlasher {
     public static void main(String[] args) {
-        String hexFilePath = "C:\\path\\to\\your\\firmware.hex";
+        String hexFilePath = Config.HexFilePath;
         try {
             ProcessBuilder pb = new ProcessBuilder("uflash", hexFilePath);
             Process process = pb.start();
