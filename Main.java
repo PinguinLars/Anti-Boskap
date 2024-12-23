@@ -1,9 +1,8 @@
 import Resources.*;
 public class Main {
     public static void main (String[]args) throws Exception {
-        //Max amount of loops is 128 (Byte interger limit)
-        int loops = Config.MainLoops;
-        while (loops < 10) {
+        int loops = 0;
+        while (loops < Config.MainLoops) {
             //Voert ColorDetector and ScreenShotter uit.
             ScreenShotter.main(args);
             ColorDetector.main(args);
@@ -12,7 +11,7 @@ public class Main {
             if (ColorDetector.black > 0) {
                 System.out.println(" en zwarte pixel(s) gedecteerd");
 //                TeamsLogger.main(args);
-                MicroMacro_pyRunner.main(args);
+//                MicroMacro_pyRunner.main(args);
 //                MicrobitFlasher.main(args);
             } else {
                 System.out.print(" en geen zwarte pixels gedecteerd");
