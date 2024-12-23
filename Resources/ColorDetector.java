@@ -13,7 +13,7 @@ public class ColorDetector {
                         int pixelColor = image.getRGB(x, y);
                         Color color = new Color(pixelColor, true);
                         if (color.getRed() < 125 && color.getGreen() < 125 && color.getBlue() < 125) {
-//                            System.out.println("ColorDetector: Zwart gedecteerd");
+//                            System.out.println("ColorDetector: Black pixel detected");
                             black = 1;
                         }
                     }

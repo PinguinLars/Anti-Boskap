@@ -15,7 +15,7 @@ public class TeamsLogger {
                 .POST(BodyPublishers.ofString(message))
                 .build();
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            System.out.println("Response status code: " + response.statusCode());
-            System.out.println("Response body: " + response.body());
+            System.out.println("TeamsLogger: Response status code: " + response.statusCode());
+            System.out.println("TeamsLogger: Response body: " + response.body());
     }
 }

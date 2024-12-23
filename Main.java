@@ -3,11 +3,11 @@ public class Main {
     public static void main (String[]args) throws Exception {
         int loops = 0;
         while (loops < Config.MainLoops) {
-            //Voert ColorDetector and ScreenShotter uit.
+            //Runs ColorDetector and ScreenShotter
             ScreenShotter.main(args);
             ColorDetector.main(args);
             System.out.print("Main: Successful execution");
-            //Stuur in bericht naar de TeamsWebhook in de achtergrond.
+            //Send a message to the Teams channel if black pixels are detected
             if (ColorDetector.black > 0) {
                 System.out.println(" en zwarte pixel(s) gedecteerd");
 //                TeamsLogger.main(args);

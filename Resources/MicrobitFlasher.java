@@ -1,8 +1,6 @@
 package Resources;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
 public class MicrobitFlasher {
     public static void main(String[] args) {
         String hexFilePath = Config.HexFilePath;

@@ -1,5 +1,5 @@
 import pyautogui
-# Kan zijn dat het programma nog aan het downloaden is terwijl dit script al klaar is.
+# MicroBit can still be flashed while this script is finished
 pyautogui.hotkey('alt', 'tab')
 pyautogui.moveTo(279, 703)
 pyautogui.click()
