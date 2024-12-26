@@ -25,7 +25,7 @@ Contributions are welcome! Follow these rules if you want to contribute:
 2. Clearly state what it adds to the project.
 
 ## Authors
-Me (PinguinLars) and my classmates (who I will not name for privacy reasons) are the authors of this project.
+Me ([PinguinLars](https://github.com/PinguinLars#hi-there-my-name-is-pinguinlars)) and my classmates (who **I will not** name for privacy reasons) are the authors of this project.
 
 ## License
 
