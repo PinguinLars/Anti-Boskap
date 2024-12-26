@@ -24,6 +24,9 @@ Contributions are welcome! Follow these rules if you want to contribute:
 1. Do not make nonsense pull requests.
 2. Clearly state what it adds to the project.
 
+## Authors
+Me (PinguinLars) and my classmates (who I will not name for privacy reasons) are the authors of this project.
+
 ## License
 
 This project is licensed under the MIT license. See the [LICENSE](LICENSE) file for more information.
