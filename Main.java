@@ -2,7 +2,7 @@ import Resources.*;
 public class Main {
     public static void main (String[]args) throws Exception {
         int loops = 0;
-        while (loops < Config.MainLoops) {
+        while (loops < Config.MainLoops || Config.MainLoops == -1) {
             //Runs ColorDetector and ScreenShotter
             ScreenShotter.main(args);
             ColorDetector.main(args);
