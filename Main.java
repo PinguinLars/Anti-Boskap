@@ -9,12 +9,12 @@ public class Main {
             System.out.print("Main: Successful execution");
             //Send a message to the Teams channel if black pixels are detected
             if (ColorDetector.black > 0) {
-                System.out.println(" en zwarte pixel(s) gedecteerd");
+                System.out.println(" and black pixels detected");
 //                TeamsLogger.main(args);
 //                MicroMacro_pyRunner.main(args);
 //                MicrobitFlasher.main(args);
             } else {
-                System.out.print(" en geen zwarte pixels gedecteerd");
+                System.out.print(" and no black pixels detected");
             }
             loops++;
         }
