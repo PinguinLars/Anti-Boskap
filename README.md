@@ -23,8 +23,6 @@ Contributions are welcome! Follow these rules if you want to contribute:
 
 1. Do not make nonsense pull requests.
 2. Clearly state what it adds to the project.
-3. Do not use AI for pull requests.
-   1. I don't care if you use AI for your own projects or forks of this project. Just don't use it for pull requests.
 
 ## License
 
