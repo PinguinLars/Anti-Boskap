@@ -11,6 +11,7 @@ public class Main {
             if (ColorDetector.black > 0) {
                 System.out.println(" and black pixels detected");
 //                TeamsLogger.main(args);
+//                choose between MicroMacro.py or MicrobitFlasher.java
 //                MicroMacro_pyRunner.main(args);
 //                MicrobitFlasher.main(args);
             } else {
