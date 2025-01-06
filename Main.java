@@ -12,7 +12,7 @@ public class Main {
                 System.out.println(" and black pixels detected");
 //                TeamsLogger.main(args);
 //                choose between MicroMacro.py or MicrobitFlasher.java
-//                MicroMacro_pyRunner.main(args);
+                MicroMacro_pyRunner.main(args);
 //                MicrobitFlasher.main(args);
             } else {
                 System.out.print(" and no black pixels detected");
