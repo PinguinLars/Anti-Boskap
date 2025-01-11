@@ -1,4 +1,5 @@
-import Resources.*;
+package src;
+
 public class Main {
     public static void main (String[]args) throws Exception {
         int loops = 0;
@@ -6,7 +7,7 @@ public class Main {
             //Runs ColorDetector and ScreenShotter
             ScreenShotter.main(args);
             ColorDetector.main(args);
-            System.out.print("Main: Successful execution");
+            System.out.print("src.Main: Successful execution");
             //Send a message to the Teams channel if black pixels are detected
             if (ColorDetector.black > 0) {
                 System.out.println(" and black pixels detected");
