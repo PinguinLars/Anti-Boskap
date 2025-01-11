@@ -1,4 +1,4 @@
-package Resources;
+package src;
 public class Config {
     //Configure this to your own paths and urls
     final public static String TeamsWebhook = "YourWebhook.url";

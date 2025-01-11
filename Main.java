@@ -1,4 +1,4 @@
-import Resources.*;
+import src.*;
 public class Main {
     public static void main (String[]args) throws Exception {
         int loops = 0;

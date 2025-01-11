@@ -1,4 +1,4 @@
-package Resources;
+package src;
 import java.awt.Rectangle;
 import java.awt.Robot;
 import java.awt.Toolkit;
