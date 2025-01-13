@@ -19,4 +19,20 @@
     <target name="clean">
         <delete dir="${build.dir}"/>
     </target>
+
+    <!-- Checkstyle Target -->
+    <target name="checkstyle">
+        <taskdef name="checkstyle" classname="com.puppycrawl.tools.checkstyle.CheckstyleTask">
+            <classpath>
+                <pathelement location="path/to/checkstyle-all.jar"/>
+            </classpath>
+        </taskdef>
+
+        <checkstyle config="path/to/checkstyle-config.xml">
+            <fileset dir="${src.dir}">
+                <include name="**/*.java"/>
+            </fileset>
+            <formatter type="xml" toFile="checkstyle-result.xml"/>
+        </checkstyle>
+    </target>
 </project>
