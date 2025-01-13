@@ -35,4 +35,48 @@
             <formatter type="xml" toFile="checkstyle-result.xml"/>
         </checkstyle>
     </target>
+    <project name="Anti-Boskap" default="compile" basedir=".">
+    <!-- Set global properties -->
+    <property name="src.dir" value="src"/>
+    <property name="build.dir" value="build"/>
+    <property name="classes.dir" value="${build.dir}/classes"/>
+
+    <!-- Initialize directories -->
+    <target name="init">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${classes.dir}"/>
+    </target>
+
+    <!-- Compile the Java source files -->
+    <target name="compile" depends="init">
+        <javac srcdir="${src.dir}" destdir="${classes.dir}"/>
+    </target>
+
+    <!-- Clean the build directory -->
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+
+    <!-- Test Target -->
+    <target name="test">
+        <taskdef name="junit" classname="org.apache.tools.ant.taskdefs.optional.junit.JUnitTask">
+            <classpath>
+                <pathelement location="path/to/junit.jar"/>
+            </classpath>
+        </taskdef>
+
+        <junit printsummary="yes" haltonfailure="yes" fork="yes">
+            <classpath>
+                <pathelement location="${classes.dir}"/>
+                <pathelement path="path/to/your/tests"/>
+            </classpath>
+            <batchtest>
+                <fileset dir="${src.dir}">
+                    <include name="**/*Test.java"/>
+                </fileset>
+            </batchtest>
+            <formatter type="plain"/>
+        </junit>
+    </target>
+</project>
 </project>
