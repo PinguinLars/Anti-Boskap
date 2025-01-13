@@ -14,7 +14,7 @@ Follow these steps to set up the project:
 
 1. Clone the repository: `git clone https://github.com/PinguinLars/Anti-Boskap.git`
 2. Install the required dependencies.
-   1. Install pyautogui `pip install pyautogui`
+   1. Install all dependacies `pip install -r requirements.txt`
 3. Configure the necessary settings.
 
 ## Contribution
