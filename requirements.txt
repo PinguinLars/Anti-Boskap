@@ -1,5 +1,5 @@
 ﻿MouseInfo==0.1.3
-PyAutoGUI==0.9.50
+PyAutoGUI==0.9.54
 PyGetWindow==0.0.9
 PyMsgBox==1.0.9
 pyperclip==1.9.0
