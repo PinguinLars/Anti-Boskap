@@ -9,3 +9,9 @@ def test_micro_macro(mocker):
     result = subprocess.run(['python', 'src/MicroMacro.py'], capture_output=True, text=True)
     assert result.returncode == 0
     assert "MicroBit can still be flashed while this script is finished" in result.stdout
+
+def test_pyautogui_import():
+    try:
+        import pyautogui
+    except ImportError:
+        pytest.fail("pyautogui could not be imported")
