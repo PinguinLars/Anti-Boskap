@@ -17,6 +17,18 @@ Follow these steps to set up the project:
    1. Install all dependacies `pip install -r requirements.txt`
 3. Configure the necessary settings.
 
+## Running Tests
+
+To run the Python tests, follow these steps:
+
+1. Ensure you have installed the required dependencies as mentioned in the Installation section.
+2. Run the tests using `pytest`:
+   ```sh
+   pytest
+   ```
+
+The tests are located in the `tests` directory. For example, the test for `src/MicroMacro.py` is in `tests/test_micro_macro.py`.
+
 ## Contribution
 
 Contributions are welcome! Follow these rules if you want to contribute:
