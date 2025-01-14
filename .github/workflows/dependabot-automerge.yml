@@ -29,6 +29,7 @@ jobs:
 
       - name: 'Auto approve and merge'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITBOT_TOKEN }}
         run: |
+          gh pr review ${{ github.event.pull_request.number }} --approve
           gh pr merge ${{ github.event.pull_request.number }} --squash --auto
