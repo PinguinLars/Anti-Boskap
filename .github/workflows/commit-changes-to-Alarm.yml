@@ -25,7 +25,7 @@ jobs:
         git push origin HEAD:main
 
     - name: Resolve merge conflicts
-      uses: stefanzweifel/git-auto-commit-action@v2
+      uses: stefanzweifel/git-auto-commit-action@v5
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         conflict-resolution-strategy: 'ours'
