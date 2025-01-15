@@ -1,0 +1,30 @@
+name: Fetch and Upload main.ts
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  fetch-and-upload:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout this repository
+      uses: actions/checkout@v2
+
+    - name: Checkout MicroAlarmSound repository
+      uses: actions/checkout@v2
+      with:
+        repository: PinguinLars/MicroAlarmSound
+
+    - name: Copy main.ts to Alarm.ts
+      run: |
+        cp main.ts ../Anti-Boskap/.microbit/Alarm.ts
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add ../Anti-Boskap/.microbit/Alarm.ts
+        git commit -m 'Update Alarm.ts with latest main.ts from MicroAlarmSound'
+        git push
