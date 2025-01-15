@@ -21,6 +21,7 @@ jobs:
         cp src/main.ts src/Leds.ts
         git add src/Leds.ts
         git commit -m 'Commit changes from main.ts to Leds.ts'
+        git pull --rebase origin main
         git push origin HEAD:main
 
     - name: Resolve merge conflicts
