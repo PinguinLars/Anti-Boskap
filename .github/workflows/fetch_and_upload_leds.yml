@@ -23,16 +23,16 @@ jobs:
 
     - name: Create Directory if it does not exist
       run: |
-        mkdir -p ../Anti-Boskap/.microbit/
+        mkdir -p .microbit/
 
     - name: Copy main.ts to Leds.ts
       run: |
-        cp main.ts ../Anti-Boskap/.microbit/Leds.ts
+        cp main.ts .microbit/Leds.ts
 
     - name: Commit and push changes
       run: |
         git config --global user.name 'PinguinLarsAlt'
         git config --global user.email 'PinguinLars1105@gmail.com'
-        git add ../Anti-Boskap/.microbit/Leds.ts
+        git add .microbit/Leds.ts
         git commit -m 'Update Leds.ts with latest main.ts from AlarmLeds'
         git push
