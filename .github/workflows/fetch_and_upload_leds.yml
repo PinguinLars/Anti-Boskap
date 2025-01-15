@@ -1,7 +1,7 @@
 name: Fetch and Upload Leds.ts
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
   schedule:
     - cron: '0 0 * * *
 
