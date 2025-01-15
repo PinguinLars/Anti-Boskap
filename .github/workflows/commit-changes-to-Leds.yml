@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v2
 
     - name: Commit changes to Leds.ts
       run: |
@@ -25,7 +25,7 @@ jobs:
         git push origin HEAD:main
 
     - name: Resolve merge conflicts
-      uses: stefanzweifel/git-auto-commit-action@v4
+      uses: stefanzweifel/git-auto-commit-action@v2
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         conflict-resolution-strategy: 'ours'

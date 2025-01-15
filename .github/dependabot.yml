@@ -16,3 +16,15 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+
+  # Update Java dependencies
+  - package-ecosystem: "maven"
+    directory: "/"
+    schedule:
+      interval: "daily"
+
+  # Update TypeScript dependencies
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
