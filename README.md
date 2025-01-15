@@ -1,4 +1,4 @@
-# O&O Satellite Project
+# Anti-Boskap Project
 
 This is a school project that uses various programs to prevent illegal deforestation. (This is for a prototype)
 
@@ -7,6 +7,8 @@ This is a school project that uses various programs to prevent illegal deforesta
 - [Samsung Flow](https://www.samsung.com/us/support/owners/app/samsung_flow)
 - Teams Workflows
 - [Micro:bit servomotor driver](https://github.com/PinguinLars/anti-boskap-microdriver)
+- Java
+- TypeScript
 
 ## Installation
 
@@ -15,6 +17,8 @@ Follow these steps to set up the project:
 1. Clone the repository: `git clone https://github.com/PinguinLars/Anti-Boskap.git`
 2. Install the required dependencies.
    1. Install all dependacies `pip install -r requirements.txt`
+   2. Install Java dependencies
+   3. Install TypeScript dependencies
 3. Configure the necessary settings.
 
 ## Contribution
