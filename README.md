@@ -6,9 +6,8 @@ This is a school project that uses various programs to prevent illegal deforesta
 
 - [Samsung Flow](https://www.samsung.com/us/support/owners/app/samsung_flow)
 - Teams Workflows
-- [Micro:bit servomotor driver](https://github.com/PinguinLars/anti-boskap-microdriver)
-- Java
-- TypeScript
+- [Micro:Bits](https://github.com/PinguinLars/Anti-Boskap/tree/main/.microbit)
+
 
 ## Installation
 
