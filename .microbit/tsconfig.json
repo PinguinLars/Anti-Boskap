@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "noImplicitAny": true,
+    "outDir": "./dist",
+    "rootDir": "./",
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/pxt-microbit/types"
+    ]
+  },
+  "include": [
+    "./*.ts"
+  ]
+}
