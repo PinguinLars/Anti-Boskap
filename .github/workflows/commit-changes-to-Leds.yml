@@ -1,0 +1,31 @@
+name: Commit changes to Leds.ts
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  commit-changes:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Commit changes to Leds.ts
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        cp src/main.ts src/Leds.ts
+        git add src/Leds.ts
+        git commit -m 'Commit changes from main.ts to Leds.ts'
+        git pull --rebase origin main
+        git push origin HEAD:main
+
+    - name: Resolve merge conflicts
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        conflict-resolution-strategy: 'ours'
