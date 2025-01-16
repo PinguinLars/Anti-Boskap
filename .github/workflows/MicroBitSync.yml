@@ -1,4 +1,4 @@
-name: Fetch and Upload Leds.ts
+name: Cross repo sync's
 
 on:
   workflow_dispatch:
