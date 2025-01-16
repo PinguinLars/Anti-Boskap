@@ -30,13 +30,17 @@ jobs:
       run: |
         cp main.ts .microbit/Leds.ts
 
-    - name: Commit and push changes
+    - name: Commit and push changes if there are any
       run: |
         git config --global user.name 'PinguinLarsAlt'
         git config --global user.email 'PinguinLars1105@gmail.com'
         git add .microbit/Leds.ts
-        git commit -m 'Update Leds.ts with latest main.ts from AlarmLeds'
-        git push
+        if ! git diff-index --quiet HEAD; then
+          git commit -m 'Update Leds.ts with latest main.ts from AlarmLeds'
+          git push
+        else
+          echo "No changes to commit"
+        fi
       
   Sync-Alarm:
     runs-on: ubuntu-latest
@@ -59,10 +63,14 @@ jobs:
       run: |
         cp main.ts .microbit/Alarm.ts
 
-    - name: Commit and push changes
+    - name: Commit and push changes if there are any
       run: |
         git config --global user.name 'PinguinLarsAlt'
         git config --global user.email 'PinguinLars1105@gmail.com'
-        git add .microbit/Leds.ts
-        git commit -m 'Update Alarm.ts with latest main.ts from MicroAlarmSound'
-        git push
+        git add .microbit/Alarm.ts
+        if ! git diff-index --quiet HEAD; then
+          git commit -m 'Update Alarm.ts with latest main.ts from MicroAlarmSound'
+          git push
+        else
+          echo "No changes to commit"
+        fi
