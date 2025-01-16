@@ -14,10 +14,10 @@ jobs:
 
     steps:
     - name: Checkout this repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Checkout AlarmLeds repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         repository: PinguinLars/AlarmLeds
         token: ${{ secrets.ACTIONS_PAT }}
@@ -37,7 +37,7 @@ jobs:
         git add .microbit/Leds.ts
         if ! git diff-index --quiet HEAD; then
           git commit -m 'Update Leds.ts with latest main.ts from AlarmLeds'
-          git push
+          git push https://github.com/PinguinLars/Anti-Boskap.git
         else
           echo "No changes to commit"
         fi
@@ -47,10 +47,10 @@ jobs:
 
     steps:
     - name: Checkout this repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Checkout AlarmLeds repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         repository: PinguinLars/MicroAlarmSound
         token: ${{ secrets.ACTIONS_PAT }}
@@ -70,7 +70,7 @@ jobs:
         git add .microbit/Alarm.ts
         if ! git diff-index --quiet HEAD; then
           git commit -m 'Update Alarm.ts with latest main.ts from MicroAlarmSound'
-          git push
+          git push https://github.com/PinguinLars/Anti-Boskap.git
         else
           echo "No changes to commit"
         fi
