@@ -9,7 +9,6 @@ This is a school project that uses various programs to prevent illegal deforesta
 - [Micro:Bits](https://github.com/PinguinLars/Anti-Boskap/tree/main/.microbit)
    - Read the readme in there.
 
-
 ## Installation
 
 Follow these steps to set up the project:

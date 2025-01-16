@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '0 0 * * *'
+  push:
+    paths:
+      - '.microbit/Leds.ts'
 
 permissions:
   contents: write
@@ -77,6 +80,40 @@ jobs:
           git commit -m 'Update Alarm.ts with latest main.ts from MicroAlarmSound'
           git pull --rebase origin main
           git push https://github.com/PinguinLars/Anti-Boskap.git
+        else
+          echo "No changes to commit"
+        fi
+
+  Sync-Leds-Commit:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout this repository
+      uses: actions/checkout@v2
+      with:
+        repository: PinguinLars/Anti-Boskap
+        token: ${{ secrets.ACTIONS_PAT }}
+
+    - name: Checkout AlarmLeds repository
+      uses: actions/checkout@v2
+      with:
+        repository: PinguinLars/AlarmLeds
+        path: alarmleds
+        token: ${{ secrets.ACTIONS_PAT }}
+
+    - name: Copy Leds.ts to AlarmLeds repository
+      run: cp .microbit/Leds.ts alarmleds/main.ts
+
+    - name: Commit and push changes to AlarmLeds repository
+      run: |
+        cd alarmleds
+        git config --global user.name 'PinguinLarsAlt'
+        git config --global user.email 'PinguinLars1105@gmail.com'
+        git add main.ts
+        if ! git diff-index --quiet HEAD; then
+          git commit -m 'Update main.ts with latest Leds.ts from Anti-Boskap'
+          git pull --rebase origin main
+          git push https://github.com/PinguinLars/AlarmLeds.git
         else
           echo "No changes to commit"
         fi
