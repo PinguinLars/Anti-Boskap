@@ -7,6 +7,7 @@ This is a school project that uses various programs to prevent illegal deforesta
 - [Samsung Flow](https://www.samsung.com/us/support/owners/app/samsung_flow)
 - Teams Workflows
 - [Micro:Bits](https://github.com/PinguinLars/Anti-Boskap/tree/main/.microbit)
+   - Read the readme in there.
 
 
 ## Installation
@@ -16,8 +17,7 @@ Follow these steps to set up the project:
 1. Clone the repository: `git clone https://github.com/PinguinLars/Anti-Boskap.git`
 2. Install the required dependencies.
    1. Install all dependacies `pip install -r requirements.txt`
-   2. Install Java dependencies
-   3. Install TypeScript dependencies
+   2. Install Java 21
 3. Configure the necessary settings.
 
 ## Contribution
