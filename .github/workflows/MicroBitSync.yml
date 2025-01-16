@@ -37,7 +37,7 @@ jobs:
         git add .microbit/Leds.ts
         if ! git diff-index --quiet HEAD; then
           git commit -m 'Update Leds.ts with latest main.ts from AlarmLeds'
-          git pull https://github.com/PinguinLars/Anti-Boskap.git
+          git pull --rebase origin main
           git push https://github.com/PinguinLars/Anti-Boskap.git
         else
           echo "No changes to commit"
@@ -71,7 +71,7 @@ jobs:
         git add .microbit/Alarm.ts
         if ! git diff-index --quiet HEAD; then
           git commit -m 'Update Alarm.ts with latest main.ts from MicroAlarmSound'
-          git pull https://github.com/PinguinLars/Anti-Boskap.git
+          git pull --rebase origin main
           git push https://github.com/PinguinLars/Anti-Boskap.git
         else
           echo "No changes to commit"
