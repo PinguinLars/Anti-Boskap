@@ -1,13 +1,7 @@
-name: Cross repo sync's
+name: Cross repo sync's Manual
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * *'
-  push:
-    paths:
-      - '.microbit/Leds.ts'
-      - '.microbit/Alarm.ts'
 
 permissions:
   contents: write
