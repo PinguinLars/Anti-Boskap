@@ -14,21 +14,23 @@ jobs:
 
     steps:
     - name: Checkout this repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v2
+      with:
+        repository: PinguinLars/Anti-Boskap
+        token: ${{ secrets.ACTIONS_PAT }}
 
     - name: Checkout AlarmLeds repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v2
       with:
         repository: PinguinLars/AlarmLeds
+        path: alarmleds
         token: ${{ secrets.ACTIONS_PAT }}
 
     - name: Create Directory if it does not exist
-      run: |
-        mkdir -p .microbit/
+      run: mkdir -p .microbit/
 
     - name: Copy main.ts to Leds.ts
-      run: |
-        cp main.ts .microbit/Leds.ts
+      run: cp alarmleds/main.ts .microbit/Leds.ts
 
     - name: Commit and push changes if there are any
       run: |
@@ -48,21 +50,23 @@ jobs:
 
     steps:
     - name: Checkout this repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v2
+      with:
+        repository: PinguinLars/Anti-Boskap
+        token: ${{ secrets.ACTIONS_PAT }}
 
-    - name: Checkout AlarmLeds repository
-      uses: actions/checkout@v4
+    - name: Checkout MicroAlarmSound repository
+      uses: actions/checkout@v2
       with:
         repository: PinguinLars/MicroAlarmSound
+        path: microalarmsound
         token: ${{ secrets.ACTIONS_PAT }}
 
     - name: Create Directory if it does not exist
-      run: |
-        mkdir -p .microbit/
+      run: mkdir -p .microbit/
 
     - name: Copy main.ts to Alarm.ts
-      run: |
-        cp main.ts .microbit/Alarm.ts
+      run: cp microalarmsound/main.ts .microbit/Alarm.ts
 
     - name: Commit and push changes if there are any
       run: |
