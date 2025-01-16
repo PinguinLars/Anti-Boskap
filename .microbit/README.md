@@ -10,6 +10,7 @@ cd .microbit
 npm install pxt
 pxt target microbit
 pxt install
-pxt build```
+pxt build
+```
 
 [//]: # (I copied the pxt.json file from Microsofts makecodes auto generted repos)

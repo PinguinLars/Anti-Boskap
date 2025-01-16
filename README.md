@@ -17,9 +17,9 @@ Follow these steps to set up the project:
 1. Clone the repository: `git clone https://github.com/PinguinLars/Anti-Boskap.git`
 2. Install the required dependencies.
    1. Install Python 3.13
-   1. Install all dependacies `pip install -r requirements.txt`
-   2. Install Java 21
-4. Configure the necessary settings.
+   2. Install all dependencies `pip install -r requirements.txt`
+   3. Install Java 21
+3. Configure the necessary settings.
 
 ## Contribution
 

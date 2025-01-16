@@ -1,3 +1,5 @@
 /screenshot.png
 /src/config.java
 /.idea
+/.microbit/pxt_modules/
+/.microbit/built/
