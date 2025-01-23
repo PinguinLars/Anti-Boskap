@@ -1,6 +1,6 @@
 {
-    "name": "CuteBot",
-    "description": "",
+    "name": "Anti Boskap",
+    "description": "All microbit files for this project",
     "dependencies": {
         "core": "*",
         "radio": "*",
