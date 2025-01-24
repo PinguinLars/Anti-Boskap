@@ -16,7 +16,7 @@ public class ColorDetector {
 //                            System.out.println("ColorDetector: Black pixel detected");
                             black = 1;
                         }
-                    }
+                    }   
                 }
             System.out.println("ColorDetector: Successful execution");
     }

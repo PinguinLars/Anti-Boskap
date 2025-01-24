@@ -1,0 +1,25 @@
+{
+    "name": "Anti-boskap",
+    "version": "0.0.0",
+    "description": "The Output for the Anti-boskap oo project",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*"
+    },
+    "files": [
+        "README.md",
+        "main.blocks",
+        "main.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj",
+    "languageRestriction": "javascript-only"
+}
