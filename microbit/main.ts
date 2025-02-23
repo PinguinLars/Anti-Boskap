@@ -3,15 +3,24 @@ let Alarm = false
 music.setBuiltInSpeakerEnabled(false)
 music.play(music.stringPlayable("C5 B C5 B C5 B C5 B ", 150), music.PlaybackMode.LoopingInBackground)
 Alarm = true
-pins.digitalWritePin(DigitalPin.P1, 1)
+pins.analogWritePin(AnalogPin.P1, 1023)
+// basic.showString("Hi I'm" + control.deviceName())
 
 input.onButtonPressed(Button.A, function () {
     deactiveAlarm()
     radio.sendString("Made by PinguinLars")
 })
 
+input.onButtonPressed(Button.AB, function () {
+    radio.sendString("reset")
+})
+
 radio.onReceivedString(function(receivedString: string) {
-    deactiveAlarm()
+    if (receivedString === "reset") {
+        control.reset()
+    } else {
+        deactiveAlarm()
+    }
 })
 
 function deactiveAlarm() {
@@ -19,7 +28,7 @@ function deactiveAlarm() {
         music.stopMelody(MelodyStopOptions.All)
         music.stopAllSounds()
         Alarm = false
-        pins.digitalWritePin(DigitalPin.P1, 0)
-        pins.digitalWritePin(DigitalPin.P2, 1)
+        pins.analogWritePin(AnalogPin.P1, 0)
+        pins.analogWritePin(AnalogPin.P2, 1023)
     }
 }

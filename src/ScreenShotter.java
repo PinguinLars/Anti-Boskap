@@ -1,10 +1,10 @@
 package src;
-import java.awt.Rectangle;
-import java.awt.Robot;
-import java.awt.Toolkit;
+
+import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import javax.imageio.ImageIO;
+
 public class ScreenShotter {
     //Takes a screenshot to later be processed with ColorDetector.java
     public static void main(String[] args) throws Exception {

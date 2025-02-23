@@ -12,7 +12,7 @@ public class ColorDetector {
                     for (int y = Config.StartY; y <= Config.EndY; y++) {
                         int pixelColor = image.getRGB(x, y);
                         Color color = new Color(pixelColor, true);
-                        if (color.getRed() < 125 && color.getGreen() < 125 && color.getBlue() < 125) {
+                        if (color.getRed() < 100 && color.getGreen() < 100 && color.getBlue() < 100) {
 //                            System.out.println("ColorDetector: Black pixel detected");
                             black = 1;
                         }
