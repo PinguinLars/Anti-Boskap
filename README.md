@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This project is done and won't be worked on any more
+
 # Anti-Boskap Project
 
 This is a school project that uses various programs to prevent illegal deforestation. (This is for a prototype)
